@@ -9,6 +9,7 @@ app.use(express.json())
 
 //  ROUTE
 
+
 // route pour la liste des parkings
 app.get('/parkings', (req,res) => {
   res.status(200).json(parkings)
@@ -45,14 +46,12 @@ app.put('/reservations/:id', (req,res) => {
   reservation.checkout = req.body.checkout
 })
 
-
-
-
-
-
-
-
-
+app.delete('/reservations/:id', (req,res) => {
+  const id = parseInt(req.params.id)
+  let reservation = reservations.find(reservation => reservation.id === id)
+  reservations.splice(reservations.indexOf(reservation),1)
+  res.status(200).json(reservations)
+})
 // PARKING
 
 // route get id parkings
