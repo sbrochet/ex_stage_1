@@ -6,10 +6,14 @@ const reservations = require('./reservation.json')
 
 //MIDDLEWARE (interprête)
 app.use(express.json())
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 
 //  ROUTE
 
-
+app.get('/', (req,res) => {
+  res.send("Serveur : OK")
+})
 // route pour la liste des parkings
 app.get('/parkings', (req,res) => {
   res.status(200).json(parkings)
@@ -63,8 +67,10 @@ app.get('/parkings/:id', (req,res) => {
 
 // route post parking
 app.post('/parkings', (req,res) => {
-  parkings.push(req.body)
-  pes.status(200).json(parkings)
+  var newparking = req.body
+  console.log(newparking)
+  parkings.push(newparking)
+  res.status(200).json(parkings)
 })
 
 // route put parkings
@@ -86,5 +92,5 @@ app.delete('/parkings/:id', (req,res) => {
   res.status(200).json(parkings)
 })
 app.listen(8080, () => {
-  console.log("Serveur à l'écoute")
+  console.log("Serveur : OK")
 })
