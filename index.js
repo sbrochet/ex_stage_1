@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 //ajout de la liste des parkings
 const parkings = require('./parkings.json')
@@ -6,7 +7,6 @@ const reservations = require('./reservation.json')
 
 //MIDDLEWARE (interprête)
 app.use(express.json())
-const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 //  ROUTE
