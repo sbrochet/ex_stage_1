@@ -74,7 +74,8 @@ app.put('/parkings/:id', (req,res) => {
   parking.name = req.body.name,
   parking.city = req.body.city,
   parking.type = req.body.type
-  res.status(200).json(parking)
+  res.status(200).json(parkings)
+  console.log(parking)
 })
 
 // route delete parking
