@@ -7,11 +7,11 @@ app.use(express.json());
 const Pool = require('pg').Pool
 const pool = new Pool({
 
-  user: 'lvando',
-  host: '10.2.2.30',
-  database: 'extranet',
-  password: 'W4"yS"^Z[n,TJ3*~',
-  port: '5435',
+  user: '',
+  host: '',
+  database: '',
+  password: '',
+  port: '',
 
 })
 
