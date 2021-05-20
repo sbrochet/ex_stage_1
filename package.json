@@ -1,7 +1,7 @@
 {
-  "name": "api_telesurvaillance",
+  "name": "api_github",
   "version": "1.0.0",
-  "description": "API Telesurveillance",
+  "description": "API GITHUB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "jquery": "^3.6.0",
-    "pg": "^8.6.0"
+    "express-x-hub": "^1.0.4"
   }
 }
